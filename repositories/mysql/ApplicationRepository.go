@@ -1,18 +1,18 @@
 package mysql
 
 import (
-	internalContracts "nikan.dev/pronto/internals/contracts"
+	"github.com/jinzhu/gorm"
 	"nikan.dev/pronto/internals/dependencies"
 	"nikan.dev/pronto/payloads"
 )
 
 type applicationRepository struct {
-	pool internalContracts.IDataPool
+	pool *gorm.DB
 	deps dependencies.CommonDependencies
 }
 
-func NewApplicationRepository(deps dependencies.CommonDependencies, pool internalContracts.IDataPool) applicationRepository {
-	return applicationRepository{pool, deps}
+func NewApplicationRepository(deps dependencies.CommonDependencies, pool interface{}) applicationRepository {
+	return applicationRepository{pool: pool.(*gorm.DB), deps: deps}
 }
 
 func (repo applicationRepository) Info() (payloads.ApplicationInfoPayload, error) {

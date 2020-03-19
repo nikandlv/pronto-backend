@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5b93b12-65d8-4ba0-8758-d45ef64726c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/OzzoValidator.go" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/OzzoValidationDriver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/mysql/ApplicationRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/mysql/ApplicationRepository.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/contracts" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -114,26 +114,26 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="471" y="121" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1583272936722" />
-    <state width="1320" height="207" key="GridCell.Tab.0.bottom" timestamp="1584577278913">
+    <state width="1320" height="207" key="GridCell.Tab.0.bottom" timestamp="1584616102222">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1583454997929" />
-    <state width="1320" height="207" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1584577278913" />
-    <state width="1320" height="207" key="GridCell.Tab.0.center" timestamp="1584577278912">
+    <state width="1320" height="207" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1584616102222" />
+    <state width="1320" height="207" key="GridCell.Tab.0.center" timestamp="1584616102221">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1583454997928" />
-    <state width="1320" height="207" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1584577278912" />
-    <state width="1320" height="207" key="GridCell.Tab.0.left" timestamp="1584577278912">
+    <state width="1320" height="207" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1584616102221" />
+    <state width="1320" height="207" key="GridCell.Tab.0.left" timestamp="1584616102221">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1583454997928" />
-    <state width="1320" height="207" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1584577278912" />
-    <state width="1320" height="207" key="GridCell.Tab.0.right" timestamp="1584577278913">
+    <state width="1320" height="207" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1584616102221" />
+    <state width="1320" height="207" key="GridCell.Tab.0.right" timestamp="1584616102221">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1583454997929" />
-    <state width="1320" height="207" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1584577278913" />
+    <state width="1320" height="207" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1584616102221" />
     <state width="1320" height="229" key="GridCell.Tab.1.bottom" timestamp="1584528833369">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -150,11 +150,11 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="229" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1584528833369" />
-    <state x="0" y="27" width="1366" height="732" key="SettingsEditor" timestamp="1584487524875">
+    <state x="13" y="42" width="1366" height="732" key="SettingsEditor" timestamp="1584615759027">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="0" y="0" width="1366" height="732" key="SettingsEditor/0.0.1366.732@0.0.1366.732" timestamp="1583446560647" />
-    <state x="0" y="27" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1584487524875" />
+    <state x="13" y="42" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1584615759027" />
     <state width="422" height="452" key="SwitcherDM" timestamp="1583663136622">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
