@@ -12,6 +12,13 @@ func NewEchoGateway() echoGateway {
 	return echoGateway{}
 }
 
+func RequestToPayload(ctx echo.Context, payload internalContracts.IPayload) (internalContracts.IPayload,error) {
+	if err := ctx.Bind(payload); err != nil {
+		return payload, err
+	}
+	return payload, nil
+}
+
 func PayloadToResponse(ctx echo.Context, payload internalContracts.IPayload, err error) error {
 	if err != nil {
 		return err

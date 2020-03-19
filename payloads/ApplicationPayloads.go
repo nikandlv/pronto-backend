@@ -23,3 +23,13 @@ func (i ApplicationPingPayload) Validation(validator internalContracts.IValidato
 		validator.String("Ping", i.Ping),
 	};
 }
+
+type MessagePayload struct {
+	Message string
+}
+
+func (i MessagePayload) Validation(validator internalContracts.IValidator) []error {
+	return []error {
+		validator.String("Message", i.Message),
+	};
+}
