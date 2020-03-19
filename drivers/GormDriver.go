@@ -24,5 +24,4 @@ func (g gormDriver) Boot(config internalContracts.IConfiguration, models ...inte
 	}
 	db.AutoMigrate(models...)
 	return db
-
 }

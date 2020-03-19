@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5b93b12-65d8-4ba0-8758-d45ef64726c8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/repositories/mysql/ApplicationRepository_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/mysql/ApplicationRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/mysql/ApplicationRepository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/GormDriver.go" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/GormDriver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/ViperDriver.go" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/ViperDriver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +64,7 @@
       <recent name="$PROJECT_DIR$/repositories/mysql" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Test.go test pronto">
     <configuration name="go build pronto" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="pronto" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -73,6 +75,21 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go test pronto" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
+      <module name="pronto" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="nikan.dev/pronto" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build pronto" />
+      <item itemvalue="Go Test.go test pronto" />
+    </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -98,10 +115,11 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="283" y="25" key="#Go_Modules_(vgo)/0.0.1366.732@0.0.1366.732" timestamp="1581101641318" />
-    <state x="147" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581100827242">
-      <screen x="0" y="0" width="1366" height="732" />
+    <state x="147" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584617023163">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="147" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.732@0.0.1366.732" timestamp="1581100827242" />
+    <state x="147" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1584617023163" />
     <state x="389" y="9" key="#go_build_pronto" timestamp="1581100839827">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
@@ -114,26 +132,26 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="471" y="121" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1583272936722" />
-    <state width="1320" height="207" key="GridCell.Tab.0.bottom" timestamp="1584616102222">
+    <state width="1320" height="207" key="GridCell.Tab.0.bottom" timestamp="1584617440163">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1583454997929" />
-    <state width="1320" height="207" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1584616102222" />
-    <state width="1320" height="207" key="GridCell.Tab.0.center" timestamp="1584616102221">
+    <state width="1320" height="207" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1584617440163" />
+    <state width="1320" height="207" key="GridCell.Tab.0.center" timestamp="1584617440162">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1583454997928" />
-    <state width="1320" height="207" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1584616102221" />
-    <state width="1320" height="207" key="GridCell.Tab.0.left" timestamp="1584616102221">
+    <state width="1320" height="207" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1584617440162" />
+    <state width="1320" height="207" key="GridCell.Tab.0.left" timestamp="1584617440161">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1583454997928" />
-    <state width="1320" height="207" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1584616102221" />
-    <state width="1320" height="207" key="GridCell.Tab.0.right" timestamp="1584616102221">
+    <state width="1320" height="207" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1584617440161" />
+    <state width="1320" height="207" key="GridCell.Tab.0.right" timestamp="1584617440163">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1583454997929" />
-    <state width="1320" height="207" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1584616102221" />
+    <state width="1320" height="207" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1584617440163" />
     <state width="1320" height="229" key="GridCell.Tab.1.bottom" timestamp="1584528833369">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

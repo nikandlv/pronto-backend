@@ -32,7 +32,7 @@ func (v viperConfiguration) Boot() error {
 func (v viperConfiguration) Get(key string) (interface{}, error) {
 	val := viper.Get(key)
 	if val == nil {
-		return nil, errors.New(fmt.Sprint("configuration Entry:%v not found", key))
+		return nil, errors.New(fmt.Sprintf("configuration Entry:%v not found", key))
 	}
 	return val, nil
 }
