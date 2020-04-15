@@ -2,10 +2,10 @@ package hash
 
 import (
 	"golang.org/x/crypto/scrypt"
-	contracts2 "nikan.dev/pronto/internals/contracts"
+	"nikan.dev/pronto/internals/contracts"
 )
 
-func Generate(config contracts2.IConfiguration, val string) ([]byte, error) {
+func Generate(config internalContracts.IConfiguration, val string) ([]byte, error) {
 	configSalt, err := config.Get("Salt")
 	if err != nil {
 		return nil,err

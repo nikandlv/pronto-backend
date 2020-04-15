@@ -12,7 +12,7 @@ const (
 
 type Exception struct {
 	Message string `json:"message"`
-	Status  Status
+	Status  Status `json:"-"`
 }
 
 func (e Exception) Error() string {

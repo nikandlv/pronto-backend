@@ -2,11 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5b93b12-65d8-4ba0-8758-d45ef64726c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/repositories/mysql/ApplicationRepository_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contracts/ICategoryRepository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contracts/ICategoryService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contracts/IPostRepository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contracts/IPostService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contracts/ISettingRepository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contracts/ISettingService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contracts/IUserRepository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contracts/IUserService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drivers/JWTDriver.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/endpoints/http/CategoryEndpoint.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/endpoints/http/PostEndpoint.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/endpoints/http/UserEndpoint.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/Category.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/Post.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/Setting.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exceptions/CategoryExceptions.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exceptions/UserExceptions.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payloads/CategoryPayloads.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payloads/SettingPayloads.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payloads/UserPayloads.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repositories/mysql/CategoryRepository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repositories/mysql/PostRepository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/CategoryService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/PostService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/UserService.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/GormDriver.go" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/GormDriver.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/ViperDriver.go" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/ViperDriver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/EchoDriver.go" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/EchoDriver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/EchoExceptionDriver.go" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/EchoExceptionDriver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OzzoValidationDriver.go" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/OzzoValidationDriver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/endpoints/http/ApplicationEndpoint.go" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints/http/ApplicationEndpoint.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internals/contracts/IPayload.go" beforeDir="false" afterPath="$PROJECT_DIR$/internals/contracts/IPayload.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internals/contracts/IValidator.go" beforeDir="false" afterPath="$PROJECT_DIR$/internals/contracts/IValidator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internals/exception/Exception.go" beforeDir="false" afterPath="$PROJECT_DIR$/internals/exception/Exception.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internals/hash/Scrypt.go" beforeDir="false" afterPath="$PROJECT_DIR$/internals/hash/Scrypt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payloads/ApplicationPayloads.go" beforeDir="false" afterPath="$PROJECT_DIR$/payloads/ApplicationPayloads.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/usr/local/go" />
+  <component name="GOROOT" path="/usr/lib/golang" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -31,11 +64,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -43,19 +76,13 @@
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/contracts" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/contracts" />
-      <recent name="$PROJECT_DIR$/endpoints/http" />
-      <recent name="$PROJECT_DIR$/services" />
-      <recent name="$PROJECT_DIR$/repositories/mysql" />
-      <recent name="$PROJECT_DIR$/entities" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/contracts" />
       <recent name="$PROJECT_DIR$/internals/contracts" />
@@ -63,8 +90,15 @@
       <recent name="$PROJECT_DIR$/internals" />
       <recent name="$PROJECT_DIR$/repositories/mysql" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/contracts" />
+      <recent name="$PROJECT_DIR$/exceptions" />
+      <recent name="$PROJECT_DIR$/endpoints/http" />
+      <recent name="$PROJECT_DIR$/services" />
+      <recent name="$PROJECT_DIR$/repositories/mysql" />
+    </key>
   </component>
-  <component name="RunManager" selected="Go Test.go test pronto">
+  <component name="RunManager" selected="Go Build.go build pronto">
     <configuration name="go build pronto" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="pronto" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -91,20 +125,8 @@
       <item itemvalue="Go Test.go test pronto" />
     </list>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="25" key="#GOROOT" timestamp="1581100783929">
@@ -115,10 +137,11 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="283" y="25" key="#Go_Modules_(vgo)/0.0.1366.732@0.0.1366.732" timestamp="1581101641318" />
-    <state x="147" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584617023163">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="145" y="3" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585881548488">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="147" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.732@0.0.1366.732" timestamp="1581100827242" />
+    <state x="145" y="3" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1585881548488" />
     <state x="147" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1584617023163" />
     <state x="389" y="9" key="#go_build_pronto" timestamp="1581100839827">
       <screen x="0" y="0" width="1366" height="732" />
@@ -132,46 +155,51 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="471" y="121" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1583272936722" />
-    <state width="1320" height="207" key="GridCell.Tab.0.bottom" timestamp="1584617440163">
+    <state width="1320" height="176" key="GridCell.Tab.0.bottom" timestamp="1586843024920">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1583454997929" />
-    <state width="1320" height="207" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1584617440163" />
-    <state width="1320" height="207" key="GridCell.Tab.0.center" timestamp="1584617440162">
+    <state width="1320" height="215" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585931665743" />
+    <state width="1320" height="176" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1586843024920" />
+    <state width="1320" height="176" key="GridCell.Tab.0.center" timestamp="1586843024920">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1583454997928" />
-    <state width="1320" height="207" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1584617440162" />
-    <state width="1320" height="207" key="GridCell.Tab.0.left" timestamp="1584617440161">
+    <state width="1320" height="215" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585931665743" />
+    <state width="1320" height="176" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1586843024920" />
+    <state width="1320" height="176" key="GridCell.Tab.0.left" timestamp="1586843024919">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1583454997928" />
-    <state width="1320" height="207" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1584617440161" />
-    <state width="1320" height="207" key="GridCell.Tab.0.right" timestamp="1584617440163">
+    <state width="1320" height="215" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585931665743" />
+    <state width="1320" height="176" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1586843024919" />
+    <state width="1320" height="176" key="GridCell.Tab.0.right" timestamp="1586843024920">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1583454997929" />
-    <state width="1320" height="207" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1584617440163" />
-    <state width="1320" height="229" key="GridCell.Tab.1.bottom" timestamp="1584528833369">
+    <state width="1320" height="215" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585931665743" />
+    <state width="1320" height="176" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1586843024920" />
+    <state width="1320" height="229" key="GridCell.Tab.1.bottom" timestamp="1584822000568">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="229" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1584528833369" />
-    <state width="1320" height="229" key="GridCell.Tab.1.center" timestamp="1584528833368">
+    <state width="1320" height="229" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1584822000568" />
+    <state width="1320" height="229" key="GridCell.Tab.1.center" timestamp="1584822000567">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="229" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1584528833368" />
-    <state width="1320" height="229" key="GridCell.Tab.1.left" timestamp="1584528833368">
+    <state width="1320" height="229" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1584822000567" />
+    <state width="1320" height="229" key="GridCell.Tab.1.left" timestamp="1584822000567">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="229" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1584528833368" />
-    <state width="1320" height="229" key="GridCell.Tab.1.right" timestamp="1584528833369">
+    <state width="1320" height="229" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1584822000567" />
+    <state width="1320" height="229" key="GridCell.Tab.1.right" timestamp="1584822000567">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="229" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1584528833369" />
-    <state x="13" y="42" width="1366" height="732" key="SettingsEditor" timestamp="1584615759027">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1320" height="229" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1584822000567" />
+    <state x="-2" y="-11" width="1366" height="732" key="SettingsEditor" timestamp="1585003110284">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="0" y="0" width="1366" height="732" key="SettingsEditor/0.0.1366.732@0.0.1366.732" timestamp="1583446560647" />
+    <state x="-2" y="-11" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1585003110284" />
     <state x="13" y="42" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1584615759027" />
     <state width="422" height="452" key="SwitcherDM" timestamp="1583663136622">
       <screen x="0" y="27" width="1366" height="741" />
@@ -181,19 +209,31 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="463" y="73" key="com.goide.refactor.move.GoMoveDeclarationDialog/0.0.1366.732@0.0.1366.732" timestamp="1582743309737" />
-    <state x="296" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583671854152">
+    <state x="296" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584747214357">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="296" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1583671854152" />
-    <state x="360" y="27" width="789" height="741" key="find.popup" timestamp="1584573086665">
+    <state x="296" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1584747214357" />
+    <state x="360" y="27" width="789" height="741" key="find.popup" timestamp="1584668013552">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="360" y="0" width="645" height="732" key="find.popup/0.0.1366.732@0.0.1366.732" timestamp="1583488033956" />
-    <state x="360" y="27" width="789" height="741" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1584573086665" />
-    <state x="347" y="39" width="672" height="685" key="search.everywhere.popup" timestamp="1583698040797">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="360" y="27" width="789" height="741" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1584668013552" />
+    <state x="347" y="12" width="672" height="710" key="search.everywhere.popup" timestamp="1585881199644">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="347" y="12" width="672" height="676" key="search.everywhere.popup/0.0.1366.732@0.0.1366.732" timestamp="1583451732811" />
-    <state x="347" y="39" width="672" height="685" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1583698040797" />
+    <state x="347" y="12" width="672" height="710" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1585881199644" />
+    <state x="347" y="39" width="672" height="685" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1584749199593" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/drivers/OzzoValidationDriver.go</url>
+          <line>125</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

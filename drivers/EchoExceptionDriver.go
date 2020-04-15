@@ -18,8 +18,8 @@ func EchoExceptionDriver(err error, c echo.Context) {
 		}{str})
 		return
 	}
-	code := http.StatusInternalServerError
-	exc, ok := err.(*exception.Exception)
+	code := http.StatusBadRequest
+	exc, ok := err.(exception.Exception)
 	if ok != true {
 		c.JSON(code, struct {
 			Message string `json:"message"`
@@ -30,6 +30,7 @@ func EchoExceptionDriver(err error, c echo.Context) {
 }
 
 func getHttpStatusCode(status exception.Status) int {
+
 	switch status {
 	case exception.NotFound:
 		return 404

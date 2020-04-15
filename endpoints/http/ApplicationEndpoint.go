@@ -16,9 +16,9 @@ type applicationEndpoint struct {
 func (endpoint applicationEndpoint) Boot(transport interface{}) {
 	t := transport.(*echo.Group)
 	group := t.Group("/application")
-	group.GET("/info", endpoint.info)
-	group.GET("/ping", endpoint.ping)
-	group.GET("/echo", endpoint.echo)
+	group.GET("/info", endpoint.info).Name = "Application.Info"
+	group.GET("/ping", endpoint.ping).Name = "Application.Ping"
+	group.GET("/echo", endpoint.echo).Name = "Application.Echo"
 }
 
 func NewApplicationEndpoint(deps dependencies.CommonDependencies, service contracts.IApplicationService) applicationEndpoint {
