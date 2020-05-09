@@ -2,7 +2,6 @@ package payloads
 
 import (
 	internalContracts "nikan.dev/pronto/internals/contracts"
-	"nikan.dev/pronto/internals/exception"
 )
 
 type CategoryCreatePayload struct {
@@ -12,14 +11,14 @@ type CategoryCreatePayload struct {
 }
 
 func (payload CategoryCreatePayload) Validate(validator internalContracts.IValidator) error {
-	if err := validator.ShortText(payload.Title); err != nil {
-		return err.(exception.Exception).WithPrefix("Title: ")
+	if err := validator.ShortText(payload.Title, "Title"); err != nil {
+		return err
 	}
-	if err := validator.ShortText(payload.Slug); err != nil {
-		return err.(exception.Exception).WithPrefix("Slug: ")
+	if err := validator.ShortText(payload.Slug, "Slug"); err != nil {
+		return err
 	}
-	if err := validator.ID(payload.ParentID); err != nil {
-		return err.(exception.Exception).WithPrefix("ParentID: ")
+	if err := validator.ID(payload.ParentID, "ParentID"); err != nil {
+		return err
 	}
 	return nil
 }

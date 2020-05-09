@@ -12,11 +12,11 @@ type SettingSetPayload struct {
 }
 
 func (payload SettingSetPayload) Validate(validator internalContracts.IValidator) error {
-	if err := validator.ShortText(payload.Name); err != nil {
-		return err.(exception.Exception).WithPrefix("Name: ")
+	if err := validator.ShortText(payload.Name, "Name"); err != nil {
+		return err
 	}
-	if err := validator.Text(payload.Value); err != nil {
-		return err.(exception.Exception).WithPrefix("Value: ")
+	if err := validator.Text(payload.Value, "Value"); err != nil {
+		return err
 	}
 	return nil
 }
@@ -28,8 +28,8 @@ type SettingGetPayload struct {
 }
 
 func (payload SettingGetPayload) Validate(validator internalContracts.IValidator) error {
-	if err := validator.ShortText(payload.Name); err != nil {
-		return err.(exception.Exception).WithPrefix("Name: ")
+	if err := validator.ShortText(payload.Name, "Name"); err != nil {
+		return err
 	}
 	return nil
 }

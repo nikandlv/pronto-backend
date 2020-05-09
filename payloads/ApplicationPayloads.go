@@ -2,7 +2,6 @@ package payloads
 
 import (
 	internalContracts "nikan.dev/pronto/internals/contracts"
-	"nikan.dev/pronto/internals/exception"
 )
 
 type ApplicationInfoPayload struct {
@@ -10,8 +9,8 @@ type ApplicationInfoPayload struct {
 }
 
 func (a ApplicationInfoPayload) Validate(validator internalContracts.IValidator) error {
-	if err := validator.ShortText(a.Version); err != nil {
-		return err.(exception.Exception).WithPrefix("Version: ")
+	if err := validator.ShortText(a.Version, "Version"); err != nil {
+		return err
 	}
 	return nil
 }
@@ -21,8 +20,8 @@ type ApplicationPingPayload struct {
 }
 
 func (i ApplicationPingPayload) Validate(validator internalContracts.IValidator) error {
-	if err := validator.ShortText(i.Ping); err != nil {
-		return err.(exception.Exception).WithPrefix("Ping: ")
+	if err := validator.ShortText(i.Ping, "Ping"); err != nil {
+		return err
 	}
 	return nil
 }
@@ -33,7 +32,7 @@ type MessagePayload struct {
 }
 
 func (m MessagePayload) Validate(validator internalContracts.IValidator) error {
-	if err := validator.ShortText(m.Message); err != nil {
-		return err.(exception.Exception).WithPrefix("Message: ")
+	if err := validator.ShortText(m.Message, "Message"); err != nil {
+		return err
 	}
 	return nil}

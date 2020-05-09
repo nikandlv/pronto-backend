@@ -3,22 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d5b93b12-65d8-4ba0-8758-d45ef64726c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/GormDriver.go" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/GormDriver.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/JWTDriver.go" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/JWTDriver.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drivers/OzzoValidationDriver.go" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/OzzoValidationDriver.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints/http/ApplicationEndpoint.go" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints/http/ApplicationEndpoint.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internals/contracts/IPayload.go" beforeDir="false" afterPath="$PROJECT_DIR$/internals/contracts/IPayload.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internals/contracts/IValidator.go" beforeDir="false" afterPath="$PROJECT_DIR$/internals/contracts/IValidator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internals/exception/Exception.go" beforeDir="false" afterPath="$PROJECT_DIR$/internals/exception/Exception.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/payloads/ApplicationPayloads.go" beforeDir="false" afterPath="$PROJECT_DIR$/payloads/ApplicationPayloads.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/payloads/CategoryPayloads.go" beforeDir="false" afterPath="$PROJECT_DIR$/payloads/CategoryPayloads.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/payloads/SettingPayloads.go" beforeDir="false" afterPath="$PROJECT_DIR$/payloads/SettingPayloads.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/payloads/UserPayloads.go" beforeDir="false" afterPath="$PROJECT_DIR$/payloads/UserPayloads.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes.json" beforeDir="false" afterPath="$PROJECT_DIR$/routes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/CategoryService.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/CategoryService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/UserService.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/UserService.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,29 +130,29 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="471" y="121" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1583272936722" />
-    <state width="1324" height="146" key="GridCell.Tab.0.bottom" timestamp="1589035678980">
+    <state width="1324" height="171" key="GridCell.Tab.0.bottom" timestamp="1589036242800">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1583454997929" />
-    <state width="1324" height="146" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589035678980" />
+    <state width="1324" height="171" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589036242800" />
     <state width="1320" height="176" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1587286889887" />
-    <state width="1324" height="146" key="GridCell.Tab.0.center" timestamp="1589035678979">
+    <state width="1324" height="171" key="GridCell.Tab.0.center" timestamp="1589036242800">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1583454997928" />
-    <state width="1324" height="146" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1589035678979" />
+    <state width="1324" height="171" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1589036242800" />
     <state width="1320" height="176" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1587286889886" />
-    <state width="1324" height="146" key="GridCell.Tab.0.left" timestamp="1589035678978">
+    <state width="1324" height="171" key="GridCell.Tab.0.left" timestamp="1589036242800">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1583454997928" />
-    <state width="1324" height="146" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1589035678978" />
+    <state width="1324" height="171" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1589036242800" />
     <state width="1320" height="176" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1587286889886" />
-    <state width="1324" height="146" key="GridCell.Tab.0.right" timestamp="1589035678979">
+    <state width="1324" height="171" key="GridCell.Tab.0.right" timestamp="1589036242800">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1583454997929" />
-    <state width="1324" height="146" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1589035678979" />
+    <state width="1324" height="171" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1589036242800" />
     <state width="1320" height="176" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1587286889886" />
     <state width="1320" height="229" key="GridCell.Tab.1.bottom" timestamp="1584822000568">
       <screen x="0" y="27" width="1366" height="741" />

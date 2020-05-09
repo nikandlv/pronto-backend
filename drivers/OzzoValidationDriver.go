@@ -9,46 +9,46 @@ import (
 type ozzoValidator struct {
 }
 
-func (o ozzoValidator) ShortText(s string) error {
+func (o ozzoValidator) ShortText(s string, field string) error {
 	if len(s) == 0 {
-		return exceptions.InvalidInput.WithMessage("cannot be empty")
+		return exceptions.InvalidInput.WithMessage(field + ": cannot be empty")
 	}
 	if len(s) > 255 {
-		return exceptions.InvalidInput.WithMessage("cannot be longer then 255 characters")
+		return exceptions.InvalidInput.WithMessage(field + ": cannot be longer then 255 characters")
 	}
 	return nil
 }
 
-func (o ozzoValidator) Text(s string) error {
+func (o ozzoValidator) Text(s string, field string) error {
 	if len(s) == 0 {
-		return exceptions.InvalidInput.WithMessage("cannot be empty")
+		return exceptions.InvalidInput.WithMessage(field + ": cannot be empty")
 	}
 	return nil
 }
 
-func (o ozzoValidator) ID(u uint) error {
+func (o ozzoValidator) ID(u uint, field string) error {
 	if u == 0 {
-		return exceptions.InvalidInput.WithMessage("cannot be 0")
+		return exceptions.InvalidInput.WithMessage(field + ": cannot be 0")
 	}
 	return nil
 }
 
-func (o ozzoValidator) Timestamp(i int64) error {
+func (o ozzoValidator) Timestamp(i int64, field string) error {
 	err := validation.Validate(i,
 		validation.Required,
 		is.Int)
 	if err != nil {
-		return exceptions.InvalidInput.WithMessage(err.Error())
+		return exceptions.InvalidInput.WithMessage(field + ": " + err.Error())
 	}
 	return nil
 }
 
-func (o ozzoValidator) Email(s string) error {
+func (o ozzoValidator) Email(s string, field string) error {
 	err := validation.Validate(s,
 		validation.Required,
 		is.Email)
 	if err != nil {
-		return exceptions.InvalidInput.WithMessage(err.Error())
+		return exceptions.InvalidInput.WithMessage(field + ": " +err.Error())
 	}
 	return nil
 }

@@ -6,28 +6,8 @@
   },
   {
     "method": "GET",
-    "path": "/api/application/ping",
-    "name": "Application.Ping"
-  },
-  {
-    "method": "GET",
-    "path": "/api/user/info",
-    "name": "User.Info"
-  },
-  {
-    "method": "POST",
-    "path": "/api/user/refresh",
-    "name": "User.Refresh"
-  },
-  {
-    "method": "GET",
     "path": "/api/application/echo",
     "name": "Application.Echo"
-  },
-  {
-    "method": "POST",
-    "path": "/api/user/login",
-    "name": "User.Login"
   },
   {
     "method": "POST",
@@ -43,5 +23,25 @@
     "method": "GET",
     "path": "/api/category/list",
     "name": "Category.list"
+  },
+  {
+    "method": "GET",
+    "path": "/api/application/ping",
+    "name": "Application.Ping"
+  },
+  {
+    "method": "GET",
+    "path": "/api/user/info",
+    "name": "User.Info"
+  },
+  {
+    "method": "POST",
+    "path": "/api/user/login",
+    "name": "User.Login"
+  },
+  {
+    "method": "POST",
+    "path": "/api/user/refresh",
+    "name": "User.Refresh"
   }
 ]
