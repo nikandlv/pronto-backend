@@ -2,34 +2,38 @@ package payloads
 
 import (
 	internalContracts "nikan.dev/pronto/internals/contracts"
+	"nikan.dev/pronto/internals/exception"
 )
 
 type ApplicationInfoPayload struct {
 	Version string
 }
 
-func (i ApplicationInfoPayload) Validation(validator internalContracts.IValidator) []internalContracts.IValidatable {
-	return []internalContracts.IValidatable {
-		validator.Validatable().Field(i.Version).Name("Version").Require().String(),
-	};
+func (a ApplicationInfoPayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.ShortText(a.Version); err != nil {
+		return err.(exception.Exception).WithPrefix("Version: ")
+	}
+	return nil
 }
 
 type ApplicationPingPayload struct {
 	Ping string
 }
 
-func (i ApplicationPingPayload) Validation(validator internalContracts.IValidator) []internalContracts.IValidatable {
-	return []internalContracts.IValidatable {
-		validator.Validatable().Field(i.Ping).Name("Ping").Require().String(),
-	};
+func (i ApplicationPingPayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.ShortText(i.Ping); err != nil {
+		return err.(exception.Exception).WithPrefix("Ping: ")
+	}
+	return nil
 }
+
 
 type MessagePayload struct {
 	Message string
 }
 
-func (i MessagePayload) Validation(validator internalContracts.IValidator) []internalContracts.IValidatable {
-	return []internalContracts.IValidatable {
-		validator.Validatable().Field(i.Message).Name("Message").Require().String(),
-	};
-}
+func (m MessagePayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.ShortText(m.Message); err != nil {
+		return err.(exception.Exception).WithPrefix("Message: ")
+	}
+	return nil}

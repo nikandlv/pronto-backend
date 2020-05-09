@@ -40,6 +40,6 @@ func (endpoint applicationEndpoint) echo(ctx echo.Context) error {
 	if err != nil {
 		return err
 	}
-	validationErr := endpoint.deps.Validator.Validate(payload)
+	validationErr := payload.Validate(endpoint.deps.Validator)
 	return drivers.PayloadToResponse(ctx, payload, validationErr)
 }

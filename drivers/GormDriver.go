@@ -1,8 +1,8 @@
 package drivers
 
 import (
-	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 	internalContracts "nikan.dev/pronto/internals/contracts"
 )
 
@@ -18,7 +18,7 @@ func (g gormDriver) Boot(config internalContracts.IConfiguration, models ...inte
 	if err != nil {
 		panic(err)
 	}
-	db, err := gorm.Open("mysql", database.(string))
+	db, err := gorm.Open("postgres", database.(string))
 	if err != nil {
 		panic(err)
 	}

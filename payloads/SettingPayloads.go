@@ -1,35 +1,48 @@
 package payloads
 
-import internalContracts "nikan.dev/pronto/internals/contracts"
+import (
+	"fmt"
+	internalContracts "nikan.dev/pronto/internals/contracts"
+	"nikan.dev/pronto/internals/exception"
+)
 
 type SettingSetPayload struct {
 	Name string
 	Value string
 }
 
-func (i SettingSetPayload) Validation(validator internalContracts.IValidator) []internalContracts.IValidatable {
-	return []internalContracts.IValidatable {
-		validator.Validatable().Field(i.Name).Name("Name").Require().String(),
-		validator.Validatable().Field(i.Name).Name("Value").Require().String(),
+func (payload SettingSetPayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.ShortText(payload.Name); err != nil {
+		return err.(exception.Exception).WithPrefix("Name: ")
 	}
+	if err := validator.Text(payload.Value); err != nil {
+		return err.(exception.Exception).WithPrefix("Value: ")
+	}
+	return nil
 }
+
 
 type SettingGetPayload struct {
 	Name string
+
 }
 
-func (i SettingGetPayload) Validation(validator internalContracts.IValidator) []internalContracts.IValidatable {
-	return []internalContracts.IValidatable {
-		validator.Validatable().Field(i.Name).Name("Name").Require().String(),
+func (payload SettingGetPayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.ShortText(payload.Name); err != nil {
+		return err.(exception.Exception).WithPrefix("Name: ")
 	}
+	return nil
 }
 
 type SettingSetBatchPayload struct {
-	Setting []SettingSetPayload
+	Settings []SettingSetPayload
 }
 
-func (i SettingSetBatchPayload) Validation(validator internalContracts.IValidator) []internalContracts.IValidatable {
-	return []internalContracts.IValidatable {
-		validator.Validatable().Field(i.Setting).Name("Setting").Require(),
+func (payload SettingSetBatchPayload) Validate(validator internalContracts.IValidator) error {
+	for index,item  := range payload.Settings {
+		if err := item.Validate(validator); err != nil {
+			return err.(exception.Exception).WithPrefix(fmt.Sprintf("Settings[%v]:", index))
+		}
 	}
+	return nil
 }

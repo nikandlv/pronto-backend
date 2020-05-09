@@ -1,5 +1,5 @@
 Host: ":4200"
-Database: "root:root@/pronto?charset=utf8&parseTime=True&loc=Local"
+Database: "user=postgres password=postgres dbname=pronto sslmode=disable"
 Secret: "11e8fb30-242c-4af6-8c3d-d7b46645e5ff"
 Salt: "14be87c3-93f0-45e7-9541-034f6757239d"
 Version: "1.0.0.0"

@@ -1,13 +1,13 @@
 [
   {
     "method": "GET",
-    "path": "/api/application/ping",
-    "name": "Application.Ping"
+    "path": "/api/application/info",
+    "name": "Application.Info"
   },
   {
     "method": "GET",
-    "path": "/api/application/echo",
-    "name": "Application.Echo"
+    "path": "/api/application/ping",
+    "name": "Application.Ping"
   },
   {
     "method": "GET",
@@ -16,13 +16,13 @@
   },
   {
     "method": "POST",
-    "path": "/api/user/register",
-    "name": "User.Register"
+    "path": "/api/user/refresh",
+    "name": "User.Refresh"
   },
   {
     "method": "GET",
-    "path": "/api/application/info",
-    "name": "Application.Info"
+    "path": "/api/application/echo",
+    "name": "Application.Echo"
   },
   {
     "method": "POST",
@@ -31,8 +31,8 @@
   },
   {
     "method": "POST",
-    "path": "/api/user/refresh",
-    "name": "User.Refresh"
+    "path": "/api/user/register",
+    "name": "User.Register"
   },
   {
     "method": "POST",

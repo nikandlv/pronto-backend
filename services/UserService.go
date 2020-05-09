@@ -16,7 +16,7 @@ type userService struct {
 }
 
 func (service userService) Register(payload payloads.UserRegisterPayload) (entities.User, error) {
-	if err := service.deps.Validator.Validate(payload); err != nil {
+	if err := payload.Validate(service.deps.Validator); err != nil {
 		return entities.User{},err
 	}
 
@@ -51,7 +51,7 @@ func (service userService) Register(payload payloads.UserRegisterPayload) (entit
 }
 
 func (service userService) CheckCredentials(payload payloads.UserCredentialsPayload) (entities.User, error) {
-	if err := service.deps.Validator.Validate(payload); err != nil {
+	if err := payload.Validate(service.deps.Validator); err != nil {
 		return entities.User{},err
 	}
 	user, err := service.repository.GetByEmail(payload.Email)
@@ -69,7 +69,7 @@ func (service userService) CheckCredentials(payload payloads.UserCredentialsPayl
 }
 
 func (service userService) Get(payload payloads.UserIDOnlyPayload) (entities.User, error) {
-	if err := service.deps.Validator.Validate(payload); err != nil {
+	if err := payload.Validate(service.deps.Validator); err != nil {
 		return entities.User{}, err
 	}
 	return service.repository.Get(payload.ID)

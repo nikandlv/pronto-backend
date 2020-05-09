@@ -1,5 +1,5 @@
 package internalContracts
 
 type IPayload interface {
-	Validation(validator IValidator) []IValidatable
+	Validate(validator IValidator) error
 }

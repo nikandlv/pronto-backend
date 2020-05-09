@@ -25,7 +25,7 @@ func (c categoryService) List() ([]entities.Category, error) {
 }
 
 func (c categoryService) Create(payload payloads.CategoryCreatePayload) (entities.Category, error) {
-	if err := c.deps.Validator.Validate(payload); err != nil {
+	if err := payload.Validate(c.deps.Validator); err != nil {
 		return entities.Category{}, err
 	}
 	exists, err := c.repository.SlugExists(payload.Slug)

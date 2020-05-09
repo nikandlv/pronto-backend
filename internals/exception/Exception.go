@@ -24,6 +24,11 @@ func (e Exception) WithMessage(Message string) Exception {
 	return e
 }
 
+func (e Exception) WithPrefix(prefix string) Exception {
+	e.Message = prefix + e.Message
+	return e
+}
+
 func (e Exception) WithStatus(Status Status) Exception {
 	e.Status = Status
 	return e

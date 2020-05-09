@@ -1,15 +1,19 @@
 package payloads
 
-import internalContracts "nikan.dev/pronto/internals/contracts"
+import (
+	internalContracts "nikan.dev/pronto/internals/contracts"
+	"nikan.dev/pronto/internals/exception"
+)
 
 type UserIDOnlyPayload struct {
 	ID uint
 }
 
-func (i UserIDOnlyPayload) Validation(validator internalContracts.IValidator) []internalContracts.IValidatable {
-	return []internalContracts.IValidatable {
-		validator.Validatable().Field(i.ID).Name("ID").Require().Number(),
+func (payload UserIDOnlyPayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.ID(payload.ID); err != nil {
+		return err.(exception.Exception).WithPrefix("ID: ")
 	}
+	return nil
 }
 
 
@@ -17,10 +21,11 @@ type UserEmailOnlyPayload struct {
 	Email string
 }
 
-func (i UserEmailOnlyPayload) Validation(validator internalContracts.IValidator) []internalContracts.IValidatable {
-	return []internalContracts.IValidatable {
-		validator.Validatable().Field(i.Email).Name("Email").Require().Email(),
-	};
+func (payload UserEmailOnlyPayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.Email(payload.Email); err != nil {
+		return err.(exception.Exception).WithPrefix("Email: ")
+	}
+	return nil
 }
 
 type UserCredentialsPayload struct {
@@ -28,11 +33,14 @@ type UserCredentialsPayload struct {
 	Password string
 }
 
-func (i UserCredentialsPayload) Validation(validator internalContracts.IValidator) []internalContracts.IValidatable {
-	return []internalContracts.IValidatable {
-		validator.Validatable().Field(i.Email).Name("Email").Require().Email(),
-		validator.Validatable().Field(i.Password).Name("Password").Require().String(),
-	};
+func (payload UserCredentialsPayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.Email(payload.Email); err != nil {
+		return err.(exception.Exception).WithPrefix("Email: ")
+	}
+	if err := validator.Text(payload.Password); err != nil {
+		return err.(exception.Exception).WithPrefix("Password: ")
+	}
+	return nil
 }
 
 
@@ -43,14 +51,22 @@ type UserRegisterPayload struct {
 	Email string
 }
 
-func (i UserRegisterPayload) Validation(validator internalContracts.IValidator) []internalContracts.IValidatable {
-	return []internalContracts.IValidatable {
-		validator.Validatable().Field(i.FirstName).Name("FirstName").Require().String(),
-		validator.Validatable().Field(i.LastName).Name("LastName").Require().String(),
-		validator.Validatable().Field(i.Password).Name("Password").Require().String(),
-		validator.Validatable().Field(i.Email).Name("Email").Require().Email(),
+func (payload UserRegisterPayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.ShortText(payload.FirstName); err != nil {
+		return err.(exception.Exception).WithPrefix("FirstName: ")
 	}
+	if err := validator.ShortText(payload.LastName); err != nil {
+		return err.(exception.Exception).WithPrefix("LastName: ")
+	}
+	if err := validator.Email(payload.Email); err != nil {
+		return err.(exception.Exception).WithPrefix("Email: ")
+	}
+	if err := validator.Text(payload.Password); err != nil {
+		return err.(exception.Exception).WithPrefix("Email: ")
+	}
+	return nil
 }
+
 
 type JWTPayload struct {
 	AccessToken string
@@ -58,20 +74,26 @@ type JWTPayload struct {
 	Expire int64
 }
 
-func (i JWTPayload) Validation(validator internalContracts.IValidator) []internalContracts.IValidatable {
-	return []internalContracts.IValidatable {
-		validator.Validatable().Field(i.AccessToken).Name("AccessToken").Require().String(),
-		validator.Validatable().Field(i.RefreshToken).Name("RefreshToken").Require().String(),
-		validator.Validatable().Field(i.Expire).Name("Expire").Require().Number(),
-	};
+func (payload JWTPayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.Text(payload.AccessToken); err != nil {
+		return err.(exception.Exception).WithPrefix("AccessToken: ")
+	}
+	if err := validator.Text(payload.RefreshToken); err != nil {
+		return err.(exception.Exception).WithPrefix("RefreshToken: ")
+	}
+	if err := validator.Timestamp(payload.Expire); err != nil {
+		return err.(exception.Exception).WithPrefix("Expire: ")
+	}
+	return nil
 }
 
 type JWTRefreshPayload struct {
 	RefreshToken string
 }
 
-func (i JWTRefreshPayload) Validation(validator internalContracts.IValidator) []internalContracts.IValidatable {
-	return []internalContracts.IValidatable {
-		validator.Validatable().Field(i.RefreshToken).Name("RefreshToken").Require().String(),
-	};
+func (payload JWTRefreshPayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.Text(payload.RefreshToken); err != nil {
+		return err.(exception.Exception).WithPrefix("RefreshToken: ")
+	}
+	return nil
 }

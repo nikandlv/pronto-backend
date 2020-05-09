@@ -63,7 +63,7 @@ func GenerateJWT(config internalContracts.IConfiguration, user entities.User) (p
 }
 
 func RefreshJWT(deps dependencies.CommonDependencies, userService contracts.IUserService, payload payloads.JWTRefreshPayload) (payloads.JWTPayload, error) {
-	if err := deps.Validator.Validate(payload); err != nil {
+	if err := payload.Validate(deps.Validator); err != nil {
 		return payloads.JWTPayload{},err
 	}
 	secret, err := deps.Configuration.Get("Secret")
