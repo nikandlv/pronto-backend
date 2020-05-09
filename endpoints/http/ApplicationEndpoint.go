@@ -17,6 +17,7 @@ func (endpoint applicationEndpoint) Boot(transport interface{}) {
 	t := transport.(*echo.Group)
 	group := t.Group("/application")
 	group.GET("/info", endpoint.info).Name = "Application.Info"
+	group.GET("/config", endpoint.config).Name = "Application.Config"
 	group.GET("/ping", endpoint.ping).Name = "Application.Ping"
 	group.GET("/echo", endpoint.echo).Name = "Application.Echo"
 }
@@ -27,6 +28,11 @@ func NewApplicationEndpoint(deps dependencies.CommonDependencies, service contra
 
 func (endpoint applicationEndpoint) info(ctx echo.Context) error {
 	payload, err := endpoint.service.Info()
+	return drivers.PayloadToResponse(ctx, payload, err)
+}
+
+func (endpoint applicationEndpoint) config(ctx echo.Context) error {
+	payload, err := endpoint.service.Config()
 	return drivers.PayloadToResponse(ctx, payload, err)
 }
 

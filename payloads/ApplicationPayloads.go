@@ -1,6 +1,7 @@
 package payloads
 
 import (
+	"nikan.dev/pronto/entities"
 	internalContracts "nikan.dev/pronto/internals/contracts"
 )
 
@@ -35,4 +36,17 @@ func (m MessagePayload) Validate(validator internalContracts.IValidator) error {
 	if err := validator.ShortText(m.Message, "Message"); err != nil {
 		return err
 	}
-	return nil}
+	return nil
+}
+
+type ApplicationConfigPayload struct {
+	Version string
+	Settings []entities.Setting
+}
+
+func (a ApplicationConfigPayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.ShortText(a.Version, "Version"); err != nil {
+		return err
+	}
+	return nil
+}

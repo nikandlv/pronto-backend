@@ -5,7 +5,7 @@ import (
 )
 
 type Setting struct {
-	entity.BaseEntity
+	entity.SimpleEntity
 	Name  string
 	Value string
 }

@@ -8,11 +8,23 @@ import (
 
 type applicationService struct {
 	repository contracts.IApplicationRepository
+	settingsRepository contracts.ISettingsRepository
 }
 
-func NewApplicationService(deps dependencies.CommonDependencies,repository contracts.IApplicationRepository) applicationService {
+func (service applicationService) Config() (payloads.ApplicationConfigPayload, error) {
+	settings, err := service.settingsRepository.List()
+	if err != nil {
+		return payloads.ApplicationConfigPayload{}, err
+	}
+	return payloads.ApplicationConfigPayload{
+		Version: "123",
+		Settings: settings,
+	}, nil
+}
+
+func NewApplicationService(deps dependencies.CommonDependencies,repository contracts.IApplicationRepository, settingsRepository contracts.ISettingsRepository) applicationService {
 	return applicationService{
-		repository,
+		repository, settingsRepository,
 	}
 }
 

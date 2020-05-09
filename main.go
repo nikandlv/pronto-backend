@@ -16,7 +16,7 @@ func main() {
 	gateway := drivers.NewEchoGateway()
 	config := drivers.NewViperConfiguration()
 	validator := drivers.NewOzzoValidator()
-	pool := drivers.NewGormDriver().Boot(config,entities.User{}, entities.Category{}, entities.Post{}, entities.Setting{})
+	pool := drivers.NewGormDriver().Boot(config,entities.User{}, entities.Category{}, entities.Post{}, entities.Setting{}, entities.File{})
 
 	deps := dependencies.CommonDependencies{Configuration: config, Validator: validator}
 
@@ -25,10 +25,10 @@ func main() {
 		gorm.NewFileRepository(deps),
 	}
 
-
+	settingsRepository := gorm.NewSettingsRepository(deps,pool)
 
 	applicationRepository := gorm.NewApplicationRepository(deps, pool)
-	applicationService := services.NewApplicationService(deps, applicationRepository)
+	applicationService := services.NewApplicationService(deps, applicationRepository, settingsRepository)
 	applicationEndpoint := http.NewApplicationEndpoint(deps,applicationService)
 
 	userRepository := gorm.NewUserRepository(deps, pool)
