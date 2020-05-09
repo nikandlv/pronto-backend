@@ -12,6 +12,7 @@ import (
 
 type userService struct {
 	repository contracts.IUserRepository
+	storageDependencies dependencies.StorageDependencies
 	deps dependencies.CommonDependencies
 }
 
@@ -75,9 +76,10 @@ func (service userService) Get(payload payloads.UserIDOnlyPayload) (entities.Use
 	return service.repository.Get(payload.ID)
 }
 
-func NewUserService(deps dependencies.CommonDependencies,repository contracts.IUserRepository) userService {
+func NewUserService(deps dependencies.CommonDependencies,storageDependencies dependencies.StorageDependencies,repository contracts.IUserRepository) userService {
 	return userService{
 		repository,
+		storageDependencies,
 		deps,
 	}
 }

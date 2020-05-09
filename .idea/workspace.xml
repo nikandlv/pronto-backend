@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d5b93b12-65d8-4ba0-8758-d45ef64726c8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/contracts/IFileRepository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/File.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repositories/gorm/FileRepository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repositories/storage/LocalFileStorage.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drivers/OzzoValidationDriver.go" beforeDir="false" afterPath="$PROJECT_DIR$/drivers/OzzoValidationDriver.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internals/contracts/IValidator.go" beforeDir="false" afterPath="$PROJECT_DIR$/internals/contracts/IValidator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payloads/ApplicationPayloads.go" beforeDir="false" afterPath="$PROJECT_DIR$/payloads/ApplicationPayloads.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payloads/CategoryPayloads.go" beforeDir="false" afterPath="$PROJECT_DIR$/payloads/CategoryPayloads.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payloads/SettingPayloads.go" beforeDir="false" afterPath="$PROJECT_DIR$/payloads/SettingPayloads.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payloads/UserPayloads.go" beforeDir="false" afterPath="$PROJECT_DIR$/payloads/UserPayloads.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internals/dependencies/CommonDependencies.go" beforeDir="false" afterPath="$PROJECT_DIR$/internals/dependencies/CommonDependencies.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/mysql/ApplicationRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/gorm/ApplicationRepository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/mysql/ApplicationRepository_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/gorm/ApplicationRepository_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/mysql/CategoryRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/gorm/CategoryRepository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/mysql/PostRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/gorm/PostRepository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/mysql/UserRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/gorm/UserRepository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/UserService.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/UserService.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +72,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/entities" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,18 +82,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/entities" />
+      <recent name="$PROJECT_DIR$/contracts" />
+      <recent name="$PROJECT_DIR$/exceptions" />
+      <recent name="$PROJECT_DIR$/endpoints/http" />
+      <recent name="$PROJECT_DIR$/services" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/contracts" />
       <recent name="$PROJECT_DIR$/internals/contracts" />
       <recent name="$PROJECT_DIR$/contracts/application" />
       <recent name="$PROJECT_DIR$/internals" />
-      <recent name="$PROJECT_DIR$/repositories/mysql" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/contracts" />
-      <recent name="$PROJECT_DIR$/exceptions" />
-      <recent name="$PROJECT_DIR$/endpoints/http" />
-      <recent name="$PROJECT_DIR$/services" />
       <recent name="$PROJECT_DIR$/repositories/mysql" />
     </key>
   </component>
@@ -103,6 +127,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="283" y="25" key="#GOROOT" timestamp="1581100783929">
       <screen x="0" y="0" width="1366" height="732" />
@@ -130,29 +165,29 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="471" y="121" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1583272936722" />
-    <state width="1324" height="171" key="GridCell.Tab.0.bottom" timestamp="1589036242800">
+    <state width="1324" height="128" key="GridCell.Tab.0.bottom" timestamp="1589059310818">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1583454997929" />
-    <state width="1324" height="171" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589036242800" />
+    <state width="1324" height="128" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589059310818" />
     <state width="1320" height="176" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1587286889887" />
-    <state width="1324" height="171" key="GridCell.Tab.0.center" timestamp="1589036242800">
+    <state width="1324" height="128" key="GridCell.Tab.0.center" timestamp="1589059310818">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1583454997928" />
-    <state width="1324" height="171" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1589036242800" />
+    <state width="1324" height="128" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1589059310818" />
     <state width="1320" height="176" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1587286889886" />
-    <state width="1324" height="171" key="GridCell.Tab.0.left" timestamp="1589036242800">
+    <state width="1324" height="128" key="GridCell.Tab.0.left" timestamp="1589059310817">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1583454997928" />
-    <state width="1324" height="171" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1589036242800" />
+    <state width="1324" height="128" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1589059310817" />
     <state width="1320" height="176" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1587286889886" />
-    <state width="1324" height="171" key="GridCell.Tab.0.right" timestamp="1589036242800">
+    <state width="1324" height="128" key="GridCell.Tab.0.right" timestamp="1589059310818">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1320" height="341" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1583454997929" />
-    <state width="1324" height="171" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1589036242800" />
+    <state width="1324" height="128" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1589059310818" />
     <state width="1320" height="176" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1587286889886" />
     <state width="1320" height="229" key="GridCell.Tab.1.bottom" timestamp="1584822000568">
       <screen x="0" y="27" width="1366" height="741" />
@@ -202,11 +237,11 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="517" y="119" width="321" height="467" key="refactoring.ChangeSignatureDialog/0.0.1366.768@0.0.1366.768" timestamp="1588988191015" />
-    <state x="347" y="12" width="672" height="710" key="search.everywhere.popup" timestamp="1589035233845">
+    <state x="347" y="12" width="672" height="710" key="search.everywhere.popup" timestamp="1589043094301">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="347" y="12" width="672" height="676" key="search.everywhere.popup/0.0.1366.732@0.0.1366.732" timestamp="1583451732811" />
-    <state x="347" y="12" width="672" height="710" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1589035233845" />
+    <state x="347" y="12" width="672" height="710" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1589043094301" />
     <state x="347" y="39" width="672" height="685" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1584749199593" />
   </component>
 </project>

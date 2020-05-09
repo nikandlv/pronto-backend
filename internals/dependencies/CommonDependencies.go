@@ -1,10 +1,16 @@
 package dependencies
 
 import (
-	contracts2 "nikan.dev/pronto/internals/contracts"
+	"nikan.dev/pronto/contracts"
+	internalContracts "nikan.dev/pronto/internals/contracts"
 )
 
 type CommonDependencies struct {
-	Configuration contracts2.IConfiguration
-	Validator     contracts2.IValidator
+	Configuration internalContracts.IConfiguration
+	Validator     internalContracts.IValidator
+}
+
+type StorageDependencies struct {
+	Storage contracts.IFileStorage
+	Repository contracts.IFileRepository
 }

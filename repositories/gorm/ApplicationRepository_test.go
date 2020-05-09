@@ -1,4 +1,4 @@
-package mysql
+package gorm
 
 import (
 	"nikan.dev/pronto/drivers"

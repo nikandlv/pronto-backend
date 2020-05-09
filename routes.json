@@ -1,38 +1,8 @@
 [
   {
     "method": "GET",
-    "path": "/api/application/info",
-    "name": "Application.Info"
-  },
-  {
-    "method": "GET",
-    "path": "/api/application/echo",
-    "name": "Application.Echo"
-  },
-  {
-    "method": "POST",
-    "path": "/api/user/register",
-    "name": "User.Register"
-  },
-  {
-    "method": "POST",
-    "path": "/api/category/create",
-    "name": "Category.create"
-  },
-  {
-    "method": "GET",
-    "path": "/api/category/list",
-    "name": "Category.list"
-  },
-  {
-    "method": "GET",
     "path": "/api/application/ping",
     "name": "Application.Ping"
-  },
-  {
-    "method": "GET",
-    "path": "/api/user/info",
-    "name": "User.Info"
   },
   {
     "method": "POST",
@@ -43,5 +13,35 @@
     "method": "POST",
     "path": "/api/user/refresh",
     "name": "User.Refresh"
+  },
+  {
+    "method": "GET",
+    "path": "/api/category/list",
+    "name": "Category.list"
+  },
+  {
+    "method": "GET",
+    "path": "/api/application/info",
+    "name": "Application.Info"
+  },
+  {
+    "method": "GET",
+    "path": "/api/application/echo",
+    "name": "Application.Echo"
+  },
+  {
+    "method": "GET",
+    "path": "/api/user/info",
+    "name": "User.Info"
+  },
+  {
+    "method": "POST",
+    "path": "/api/user/register",
+    "name": "User.Register"
+  },
+  {
+    "method": "POST",
+    "path": "/api/category/create",
+    "name": "Category.create"
   }
 ]
