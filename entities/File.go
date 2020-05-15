@@ -7,8 +7,7 @@ import (
 type File struct {
 	entity.BaseEntity
 	Name  string
-	Type  string
-	Path string
-	Storage string
+	Mime  string
+	Scope string
 	Size int64
 }

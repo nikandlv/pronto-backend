@@ -4,17 +4,17 @@ import (
 	"nikan.dev/pronto/internals/entity"
 )
 
-type UserStatus int
-
-const (
-	PENDING UserStatus = iota
-	ACTIVE
-	BANNED
-)
-
-func (d UserStatus) String() string {
-	return [...]string{"PENDING", "ACTIVE", "BANNED"}[d]
-}
+//type UserStatus int
+//
+//const (
+//	PENDING UserStatus = iota
+//	ACTIVE
+//	BANNED
+//)
+//
+//func (d UserStatus) String() string {
+//	return [...]string{"PENDING", "ACTIVE", "BANNED"}[d]
+//}
 
 type User struct {
 	entity.BaseEntity
@@ -22,6 +22,7 @@ type User struct {
 	LastName string
 	Password string `json:"-"`
 	Email string
-	Status UserStatus
+	//Status UserStatus
 	Role string
+	Avatar string
 }

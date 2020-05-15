@@ -20,9 +20,11 @@ func main() {
 
 	deps := dependencies.CommonDependencies{Configuration: config, Validator: validator}
 
+	guard := drivers.NewPermissionGuard(deps)
+
 	storageDeps := dependencies.StorageDependencies{
-		storage.NewLocalFileStorage(deps),
-		gorm.NewFileRepository(deps),
+		Storage:    storage.NewLocalFileStorage(deps),
+		Repository: gorm.NewFileRepository(deps,pool),
 	}
 
 	settingsRepository := gorm.NewSettingsRepository(deps,pool)
@@ -43,6 +45,9 @@ func main() {
 	postService := services.NewPostService(deps, postRepository)
 	postEndpoint := http.NewPostEndpoint(deps,postService)
 
-	gateway.Boot(config, applicationEndpoint, userEndpoint, categoryEndpoint, postEndpoint)
+	storageService := services.NewStorageService(deps,storageDeps,guard)
+	storageEndpoint := http.NewStorageEndpoint(deps,storageService)
+
+	gateway.Boot(config, applicationEndpoint, userEndpoint, categoryEndpoint, postEndpoint, storageEndpoint)
 
 }

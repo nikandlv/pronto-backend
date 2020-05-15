@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"nikan.dev/pronto/internals/dependencies"
+	"nikan.dev/pronto/internals/entity"
 	"os"
 )
 
@@ -12,16 +13,17 @@ type localFileStorage struct {
 	
 }
 
-func (l localFileStorage) Copy(reader io.Reader,from string) (bool, error) {
-	dst, err := os.Create(from)
+func (l localFileStorage) Store(file entity.FileEntity, path string) error {
+	dst, err := os.Create(fmt.Sprintf("%v/%v",path,file.Name))
 	if err != nil {
-		return false, err
+		return err
 	}
 	defer dst.Close()
-	if _, err = io.Copy(dst, reader); err != nil {
-		return false, err
+	if _, err = io.Copy(dst, file.Reader); err != nil {
+		return  err
 	}
-	return true, nil
+	return nil
+
 }
 
 func (l localFileStorage) Remove(path string)  (bool, error) {

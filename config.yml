@@ -2,7 +2,7 @@ Host: ":4200"
 Database: "user=postgres password=postgres dbname=pronto sslmode=disable"
 Secret: "11e8fb30-242c-4af6-8c3d-d7b46645e5ff"
 Salt: "14be87c3-93f0-45e7-9541-034f6757239d"
-Version: "1.0.0.0"
+Version: "1.0.0"
 
 Roles:
   - admin
@@ -11,7 +11,19 @@ Roles:
 
 DefaultRole: user
 
+UploadsFolder: storage/uploads
+AvatarsFolder: storage/uploads/avatars
+
 Permissions:
   admin:
-    - ADMIN_PANEL
-    - ADD_CATEGORY
+    ADMIN_PANEL: true
+    ADD_CATEGORY: true
+    STORAGE_LIST: true
+    STORAGE_STORE: true
+    STORAGE_DELETE: true
+  user:
+    ADMIN_PANEL: true
+    ADD_CATEGORY: true
+    STORAGE_LIST: true
+    STORAGE_STORE: true
+    STORAGE_DELETE: true

@@ -36,3 +36,7 @@ func (v viperConfiguration) Get(key string) (interface{}, error) {
 	}
 	return val, nil
 }
+
+func (v viperConfiguration) Contains(key string) bool {
+	return viper.IsSet(key)
+}

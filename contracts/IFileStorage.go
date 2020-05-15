@@ -1,9 +1,9 @@
 package contracts
 
-import "io"
+import "nikan.dev/pronto/internals/entity"
 
 type IFileStorage interface
 {
-	Copy(reader io.Reader, from string) (bool, error)
+	Store(file entity.FileEntity, path string) error
 	Remove(name string) (bool, error)
 }

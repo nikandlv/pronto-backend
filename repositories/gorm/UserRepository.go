@@ -12,6 +12,14 @@ type userRepository struct {
 	deps dependencies.CommonDependencies
 }
 
+func (repository userRepository) Update(user entities.User) (entities.User, error) {
+	q := repository.pool.Model(&user).Updates(user)
+	if q.Error != nil {
+		return user, q.Error
+	}
+	return user, nil
+}
+
 func NewUserRepository(deps dependencies.CommonDependencies, pool interface{}) userRepository {
 	return userRepository{pool: pool.(*gorm.DB), deps: deps}
 }

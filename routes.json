@@ -1,8 +1,118 @@
 [
   {
-    "method": "GET",
+    "method": "PATCH",
     "path": "/api/user/info",
-    "name": "User.Info"
+    "name": "User.Update"
+  },
+  {
+    "method": "POST",
+    "path": "/api/category/create",
+    "name": "Category.create"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/storage",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/storage/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/storage/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/storage",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/storage",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/user/avatar",
+    "name": "User.PredefinedAvatar"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/application/info",
+    "name": "Application.Info"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/storage/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/storage/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/storage/file/:id",
+    "name": "Storage.delete"
+  },
+  {
+    "method": "GET",
+    "path": "/storage/*",
+    "name": "github.com/labstack/echo/v4.common.static.func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
   },
   {
     "method": "POST",
@@ -11,8 +121,38 @@
   },
   {
     "method": "POST",
+    "path": "/api/storage",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/api/storage/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/application/ping",
+    "name": "Application.Ping"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
     "path": "/api/user/register",
     "name": "User.Register"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/storage",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
   },
   {
     "method": "POST",
@@ -20,14 +160,29 @@
     "name": "User.Refresh"
   },
   {
+    "method": "CONNECT",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
     "method": "POST",
-    "path": "/api/category/create",
-    "name": "Category.create"
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
   },
   {
     "method": "GET",
-    "path": "/api/application/info",
-    "name": "Application.Info"
+    "path": "/api/user/info",
+    "name": "User.Info"
   },
   {
     "method": "GET",
@@ -35,9 +190,64 @@
     "name": "Application.Config"
   },
   {
+    "method": "PATCH",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/user/avatar",
+    "name": "User.Avatar"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/storage/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "POST",
+    "path": "/api/storage/store",
+    "name": "Storage.store"
+  },
+  {
     "method": "GET",
-    "path": "/api/application/ping",
-    "name": "Application.Ping"
+    "path": "/api/category/list",
+    "name": "Category.list"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/storage/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/storage/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/storage",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "GET",
+    "path": "/api/storage",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/storage",
+    "name": "github.com/labstack/echo/v4.glob..func1"
   },
   {
     "method": "GET",
@@ -46,7 +256,52 @@
   },
   {
     "method": "GET",
-    "path": "/api/category/list",
-    "name": "Category.list"
+    "path": "/api/storage/list",
+    "name": "Storage.list"
+  },
+  {
+    "method": "HEAD",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/storage",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/storage/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/storage/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/api/storage",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/api/storage",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/user/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/api/storage/*",
+    "name": "github.com/labstack/echo/v4.glob..func1"
+  },
+  {
+    "method": "REPORT",
+    "path": "/api/user",
+    "name": "github.com/labstack/echo/v4.glob..func1"
   }
 ]

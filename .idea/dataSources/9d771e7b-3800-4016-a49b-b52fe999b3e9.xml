@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.18">
     <root id="1">
       <ServerVersion>12.2</ServerVersion>
-      <StartupTime>1589060321</StartupTime>
+      <StartupTime>1589415236</StartupTime>
     </root>
     <database id="2" parent="1" name="postgres">
       <ObjectId>13408</ObjectId>
@@ -13,7 +13,7 @@
     <database id="3" parent="1" name="pronto">
       <ObjectId>16384</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>648</IntrospectionStateNumber>
+      <IntrospectionStateNumber>661</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16677|16679|1
 sequence|table|16641|16643|1
@@ -71,7 +71,7 @@ sequence|table|16689|16691|1
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>649</IntrospectionStateNumber>
+      <IntrospectionStateNumber>662</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="16" parent="3" name="heap">
@@ -204,7 +204,7 @@ sequence|table|16689|16691|1
     <table id="37" parent="15" name="users">
       <ObjectId>16643</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>638</StateNumber>
+      <StateNumber>657</StateNumber>
     </table>
     <column id="38" parent="33" name="id">
       <Position>1</Position>
@@ -538,19 +538,25 @@ sequence|table|16689|16691|1
       <StateNumber>638</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="91" parent="37" name="users_pkey">
+    <column id="91" parent="37" name="avatar">
+      <Position>11</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>657</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="92" parent="37" name="users_pkey">
       <ObjectId>16650</ObjectId>
       <StateNumber>638</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="92" parent="37" name="idx_users_deleted_at">
+    <index id="93" parent="37" name="idx_users_deleted_at">
       <ObjectId>16652</ObjectId>
       <StateNumber>639</StateNumber>
       <ColNames>deleted_at</ColNames>
     </index>
-    <key id="93" parent="37" name="users_pkey">
+    <key id="94" parent="37" name="users_pkey">
       <ObjectId>16651</ObjectId>
       <StateNumber>638</StateNumber>
       <ColNames>id</ColNames>

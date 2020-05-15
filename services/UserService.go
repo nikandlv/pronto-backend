@@ -2,18 +2,54 @@ package services
 
 import (
 	"encoding/base64"
+	"fmt"
+	"github.com/google/uuid"
 	"nikan.dev/pronto/contracts"
 	"nikan.dev/pronto/entities"
 	"nikan.dev/pronto/exceptions"
 	"nikan.dev/pronto/internals/dependencies"
+	"nikan.dev/pronto/internals/entity"
 	"nikan.dev/pronto/internals/hash"
 	"nikan.dev/pronto/payloads"
+	"path/filepath"
 )
 
 type userService struct {
 	repository contracts.IUserRepository
 	storageDependencies dependencies.StorageDependencies
 	deps dependencies.CommonDependencies
+}
+
+func (service userService) UpdateAvatar(user entities.User, file entity.FileEntity) (entities.User, error) {
+	file.Name = fmt.Sprintf("%v%v", uuid.New() ,filepath.Ext(file.Name))
+	avatarFolder, err := service.deps.Configuration.Get("AvatarsFolder")
+	if err != nil {
+		return user, err
+	}
+	err = service.storageDependencies.Storage.Store(file,avatarFolder.(string) )
+	if err != nil {
+		return user, err
+	}
+	user.Avatar = file.Name
+	return service.repository.Update(user)
+}
+
+func (service userService) Update(user entities.User, payload payloads.UserUpdatePayload) (entities.User, error) {
+	if err := payload.Validate(service.deps.Validator); err != nil {
+		return user, err
+	}
+	user.FirstName = payload.FirstName
+	user.LastName = payload.LastName
+	user.Email = payload.Email
+    return  service.repository.Update(user)
+}
+
+func (service userService) UpdatePredefinedAvatar(user entities.User, payload payloads.UserUpdatePredefinedAvatarPayload) (entities.User, error) {
+	if err := payload.Validate(service.deps.Validator); err != nil {
+		return user, err
+	}
+	user.Avatar = payload.Avatar
+	return service.repository.Update(user)
 }
 
 func (service userService) Register(payload payloads.UserRegisterPayload) (entities.User, error) {
@@ -37,18 +73,13 @@ func (service userService) Register(payload payloads.UserRegisterPayload) (entit
 	if err != nil {
 		return entities.User{}, err
 	}
-	user, err := service.repository.Create(entities.User{
+	return service.repository.Create(entities.User{
 		FirstName:  payload.FirstName,
 		LastName:   payload.LastName,
 		Password:   base64.StdEncoding.EncodeToString(hashBytes),
 		Email:      payload.Email,
-		Status:     entities.PENDING,
 		Role:       defaultUser.(string),
 	})
-	if err != nil {
-		return entities.User{}, err
-	}
-	return user, nil
 }
 
 func (service userService) CheckCredentials(payload payloads.UserCredentialsPayload) (entities.User, error) {

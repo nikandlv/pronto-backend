@@ -4,6 +4,8 @@ import (
 	"errors"
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 	"nikan.dev/pronto/contracts"
 	"nikan.dev/pronto/entities"
 	internalContracts "nikan.dev/pronto/internals/contracts"
@@ -13,13 +15,23 @@ import (
 )
 
 type jwtGrantClaims struct {
-	user entities.User
+	User *entities.User
 	jwt.StandardClaims
 }
 
 type jwtRefreshClaims struct {
 	ID uint
 	jwt.StandardClaims
+}
+
+func GetClaims(claims jwt.Claims) *jwtGrantClaims {
+	return claims.(*jwtGrantClaims)
+}
+
+func GetUser(ctx echo.Context)  entities.User {
+	user := ctx.Get("user").(*jwt.Token)
+	claims := GetClaims(user.Claims)
+	return *claims.User
 }
 
 func GenerateJWT(config internalContracts.IConfiguration, user entities.User) (payloads.JWTPayload, error) {
@@ -29,7 +41,7 @@ func GenerateJWT(config internalContracts.IConfiguration, user entities.User) (p
 	}
 	accessTokenExpire := time.Now().Add(time.Hour * 2).Unix()
 	claims := &jwtGrantClaims{
-		user,
+		&user,
 		jwt.StandardClaims{
 			ExpiresAt: accessTokenExpire,
 		},
@@ -91,4 +103,17 @@ func RefreshJWT(deps dependencies.CommonDependencies, userService contracts.IUse
 
 	return payloads.JWTPayload{}, errors.New("cant verify the refresh token")
 
+}
+
+func JwtGroup(config internalContracts.IConfiguration,group *echo.Group) *echo.Group {
+	secret, err := config.Get("Secret")
+	if err != nil {
+		panic("configuration does not have a Secret")
+	}
+	protected := group.Group("")
+	protected.Use(middleware.JWTWithConfig(middleware.JWTConfig{
+		SigningKey: []byte(secret.(string)),
+		Claims:     &jwtGrantClaims{},
+	}))
+	return protected
 }

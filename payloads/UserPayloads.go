@@ -96,3 +96,33 @@ func (payload JWTRefreshPayload) Validate(validator internalContracts.IValidator
 	}
 	return nil
 }
+
+type UserUpdatePayload struct {
+	FirstName string
+	LastName string
+	Email string
+}
+
+func (payload UserUpdatePayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.ShortText(payload.FirstName, "FirstName"); err != nil {
+		return err
+	}
+	if err := validator.ShortText(payload.LastName, "LastName"); err != nil {
+		return err
+	}
+	if err := validator.Email(payload.Email, "Email"); err != nil {
+		return err
+	}
+	return nil
+}
+
+type UserUpdatePredefinedAvatarPayload struct {
+	Avatar string
+}
+
+func (payload UserUpdatePredefinedAvatarPayload) Validate(validator internalContracts.IValidator) error {
+	if err := validator.ShortText(payload.Avatar, "Avatar"); err != nil {
+		return err
+	}
+	return nil
+}

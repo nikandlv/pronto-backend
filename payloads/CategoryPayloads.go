@@ -17,8 +17,5 @@ func (payload CategoryCreatePayload) Validate(validator internalContracts.IValid
 	if err := validator.ShortText(payload.Slug, "Slug"); err != nil {
 		return err
 	}
-	if err := validator.ID(payload.ParentID, "ParentID"); err != nil {
-		return err
-	}
 	return nil
 }

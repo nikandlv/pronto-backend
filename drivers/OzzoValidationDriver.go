@@ -33,6 +33,13 @@ func (o ozzoValidator) ID(u uint, field string) error {
 	return nil
 }
 
+func (o ozzoValidator) PositiveNumber(u int, field string) error {
+	if u < 0  {
+		return exceptions.InvalidInput.WithMessage(field + ": cannot should be greater or equal to 0")
+	}
+	return nil
+}
+
 func (o ozzoValidator) Timestamp(i int64, field string) error {
 	err := validation.Validate(i,
 		validation.Required,
